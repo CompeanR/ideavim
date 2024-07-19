@@ -62,7 +62,7 @@ nnoremap <leader>ff :action FindInPath<CR>
 nnoremap <leader>sf :action GotoFile<CR>
 nnoremap <leader>ls :action ActivateStructureToolWindow<CR>
 noremap <leader>fs :action FileStructurePopup<CR>
-nnoremap <leader>o :action RecentFiles<CR>
+nnoremap <leader>or :action RecentFiles<CR>
 
 " Code completion
 nnoremap <c-a> :action GotoAction<CR>
@@ -145,6 +145,7 @@ nmap <leader>os :action ShowSettings<CR>
 " Project Window
 nnoremap <leader>pn :action NextProjectWindow<CR>
 nnoremap <leader>pp :action PreviousProjectWindow<CR>
+nnoremap <leader>op :action OpenProjectWindows<CR>
 
 
 " Set Plugins
