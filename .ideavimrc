@@ -123,10 +123,16 @@ nmap <leader>mt :action EditorTabPopupMenu<CR>
 nmap <leader>mw :action ToolWindowsGroup<CR>
 
 " Debugger
-nmap <leader>br :action Debugger.RemoveAllBreakpoints<CR>
+nmap <leader>rb :action Debugger.RemoveAllBreakpoints<CR>
 nmap <leader>bs :action ToggleLineBreakpoint<CR>
 nmap <leader>h :action QuickEvaluateExpression<CR>
-nmap <leader>dr :action Resume<CR>
+nmap <leader>rp :action Resume<CR>
+nnoremap <leader>vb :action ViewBreakpoints<CR>
+nnoremap <leader>ex :action EvaluateExpression<CR>
+nnoremap <leader>si :action StepInto<CR>
+nnoremap <leader>ds :action RunToolbarMainMultipleStopAction<CR>
+nnoremap <leader>dd :action Debug<CR>
+nnoremap <leader>rb :action JavaScript.Debugger.ReloadInBrowser<CR>
 sethandler <c-j> a:vim
 sethandler <c-k> a:vim
 
@@ -146,3 +152,5 @@ Plug 'preservim/nerdtree'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-highlightedyank'
+
+
