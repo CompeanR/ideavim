@@ -23,7 +23,7 @@ set easymotion
 "let g:NERDTreeWinSize=30
 "let g:NERDTreeMapPreview = 'O'
 nmap <leader>ee :NERDTreeToggle<CR>
-nmap <leader>fe :NERDTreeFocus<CR>
+nmap ce :NERDTreeFocus<CR>
 nnoremap <c-d> <c-d>zz
 nnoremap <c-u> <c-u>zz
 
@@ -49,8 +49,8 @@ nnoremap <c-w> :action CloseContent<CR>
 " Tab navigation
 nnoremap <leader>tn :bnext<CR>
 nnoremap <leader>tp :bprevious<CR>
-nmap <C-Tab> :action PreviousTab<CR>
-nmap <Tab> :action NextTab<CR>
+nmap <c-[> :action PreviousTab<CR>
+nmap <c-]> :action NextTab<CR>
 nmap <leader>t :action GotoTest<CR>
 
 " Move selected line / block of text in visual mode
@@ -68,7 +68,7 @@ nnoremap <leader>or :action RecentFiles<CR>
 nnoremap <c-a> :action GotoAction<CR>
 nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
 nnoremap <c-p> :action RecentFiles<CR>
-nnoremap <c-r> :action RunMenu<CR>
+nnoremap <leader>rm :action RunMenu<CR>
 nnoremap <c-g> :action Generate<CR>
 nnoremap <leader><Tab> :action ShowNavBar<CR>
 
@@ -146,6 +146,12 @@ nmap <leader>os :action ShowSettings<CR>
 nnoremap <leader>pn :action NextProjectWindow<CR>
 nnoremap <leader>pp :action PreviousProjectWindow<CR>
 nnoremap <leader>op :action OpenProjectWindows<CR>
+
+" Commands
+"
+" Editor
+nnoremap no :action SelectNextOccurrence<CR>
+nnoremap ch :action ShowHoverInfo<CR>
 
 
 " Set Plugins
