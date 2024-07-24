@@ -24,8 +24,8 @@ set easymotion
 "let g:NERDTreeMapPreview = 'O'
 nmap <leader>ee :NERDTreeToggle<CR>
 nmap ce :NERDTreeFocus<CR>
-nnoremap <c-d> <c-d>zz
-nnoremap <c-u> <c-u>zz
+" nnoremap <c-d> <c-d>zz
+" nnoremap <c-u> <c-u>zz
 
 " continuous shift
 xnoremap < <gv
@@ -79,8 +79,8 @@ nmap [g :action GotoPreviousError<CR>
 nmap ]g :action GotoNextError<CR>
 nmap [u :action GotoPrevElementUnderCaretUsage<CR>
 nmap ]u :action GotoNextElementUnderCaretUsage<CR>
-nmap [o :action PreviousOccurence<CR>
-nmap ]o :action NextOccurence<CR>
+nmap <c-s-k> :action PreviousOccurence<CR>
+nmap <c-s-j> :action NextOccurence<CR>
 nmap [m :action MethodUp<CR>
 nmap ]m :action MethodDown<CR>
 nmap [c :action JumpToLastChange<CR>
@@ -123,16 +123,18 @@ nmap <leader>mt :action EditorTabPopupMenu<CR>
 nmap <leader>mw :action ToolWindowsGroup<CR>
 
 " Debugger
-nmap <leader>rb :action Debugger.RemoveAllBreakpoints<CR>
-nmap <leader>bs :action ToggleLineBreakpoint<CR>
-nmap <leader>h :action QuickEvaluateExpression<CR>
-nmap <leader>rp :action Resume<CR>
-nnoremap <leader>vb :action ViewBreakpoints<CR>
-nnoremap <leader>ex :action EvaluateExpression<CR>
-nnoremap <leader>si :action StepInto<CR>
+nmap <leader>dra :action Debugger.RemoveAllBreakpoints<CR>
+nmap <leader>db :action ToggleLineBreakpoint<CR>
+nmap <c-h> :action QuickEvaluateExpression<CR>
+nmap <c-j> :action StepOver<CR>
+nmap <leader>dc :action Resume<CR>
+nnoremap <leader>dvb :action ViewBreakpoints<CR>
+nnoremap <leader>dex :action EvaluateExpression<CR>
+nnoremap <leader>dsi :action StepInto<CR>
 nnoremap <leader>ds :action RunToolbarMainMultipleStopAction<CR>
 nnoremap <leader>dd :action Debug<CR>
-nnoremap <leader>rb :action JavaScript.Debugger.ReloadInBrowser<CR>
+nnoremap <leader>dri :action JavaScript.Debugger.ReloadInBrowser<CR>
+nnoremap <leader>drc :action RunToCursor<CR>
 sethandler <c-j> a:vim
 sethandler <c-k> a:vim
 
@@ -150,7 +152,7 @@ nnoremap <leader>op :action OpenProjectWindows<CR>
 " Commands
 "
 " Editor
-nnoremap no :action SelectNextOccurrence<CR>
+nnoremap sn :action SelectNextOccurrence<CR>
 nnoremap ch :action ShowHoverInfo<CR>
 
 
