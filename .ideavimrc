@@ -135,11 +135,7 @@ nnoremap <leader>ds :action RunToolbarMainMultipleStopAction<CR>
 nnoremap <leader>dd :action Debug<CR>
 nnoremap <leader>dri :action JavaScript.Debugger.ReloadInBrowser<CR>
 nnoremap <leader>drc :action RunToCursor<CR>
-sethandler <c-j> a:vim
-sethandler <c-k> a:vim
-
-" Terminal
-nmap <leader>t :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>dw :action ActivateDebugToolWindow<CR>
 
 " Settings
 nmap <leader>os :action ShowSettings<CR>
@@ -149,12 +145,19 @@ nnoremap <leader>pn :action NextProjectWindow<CR>
 nnoremap <leader>pp :action PreviousProjectWindow<CR>
 nnoremap <leader>op :action OpenProjectWindows<CR>
 
-" Commands
-"
 " Editor
 nnoremap sn :action SelectNextOccurrence<CR>
 nnoremap <c-s-h> :action ShowHoverInfo<CR>
 
+" Bookmarks
+nnoremap <leader>bw :action ActivateBookmarksToolWindow<CR>
+nnoremap <leader>ba :action ToggleBookmark<CR>
+
+" Commits
+nnoremap <leader>cw :action ActivateCommitToolWindow<CR>
+
+" Git
+nnoremap <leader>gw :action ActivateVersionControlToolWindow<CR>
 
 " Set Plugins
 Plug 'preservim/nerdtree'
