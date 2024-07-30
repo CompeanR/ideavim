@@ -153,7 +153,7 @@ nnoremap <leader>op :action OpenProjectWindows<CR>
 "
 " Editor
 nnoremap sn :action SelectNextOccurrence<CR>
-nnoremap ch :action ShowHoverInfo<CR>
+nnoremap <c-s-h> :action ShowHoverInfo<CR>
 
 
 " Set Plugins
