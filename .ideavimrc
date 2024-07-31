@@ -139,25 +139,31 @@ nnoremap <leader>dw :action ActivateDebugToolWindow<CR>
 
 " Settings
 nmap <leader>os :action ShowSettings<CR>
+nnoremap <leader>wc :action HideActiveWindow<CR>
 
 " Project Window
-nnoremap <leader>pn :action NextProjectWindow<CR>
-nnoremap <leader>pp :action PreviousProjectWindow<CR>
+nnoremap ]p :action NextProjectWindow<CR>
+nnoremap [p :action PreviousProjectWindow<CR>
 nnoremap <leader>op :action OpenProjectWindows<CR>
 
 " Editor
 nnoremap sn :action SelectNextOccurrence<CR>
 nnoremap <c-s-h> :action ShowHoverInfo<CR>
+nnoremap <leader>fl :action Javascript.Linters.EsLint.Fix<CR>
 
-" Bookmarks
-nnoremap <leader>bw :action ActivateBookmarksToolWindow<CR>
+" Bookmarks Window
+nnoremap <leader>bo :action ActivateBookmarksToolWindow<CR>
 nnoremap <leader>ba :action ToggleBookmark<CR>
+nnoremap <leader>bs :action ShowBookmarks<CR>
+nnoremap ]b :action GotoNextBookmark<CR>
+nnoremap [b :action GotoPreviousBookmark<CR>
 
-" Commits
-nnoremap <leader>cw :action ActivateCommitToolWindow<CR>
+" Commits Window
+nnoremap <leader>co :action ActivateCommitToolWindow<CR>
+nnoremap <leader>cs :action Vcs.Show.Shelf<CR>
 
-" Git
-nnoremap <leader>gw :action ActivateVersionControlToolWindow<CR>
+" Git Window
+nnoremap <leader>go :action ActivateVersionControlToolWindow<CR>
 
 " Set Plugins
 Plug 'preservim/nerdtree'
