@@ -128,14 +128,15 @@ nmap <leader>db :action ToggleLineBreakpoint<CR>
 nmap <c-h> :action QuickEvaluateExpression<CR>
 nmap <c-j> :action StepOver<CR>
 nmap <leader>dc :action Resume<CR>
-nnoremap <leader>dvb :action ViewBreakpoints<CR>
+nnoremap <leader>dv :action ViewBreakpoints<CR>
 nnoremap <leader>dex :action EvaluateExpression<CR>
 nnoremap <leader>dsi :action StepInto<CR>
 nnoremap <leader>ds :action RunToolbarMainMultipleStopAction<CR>
 nnoremap <leader>dd :action Debug<CR>
 nnoremap <leader>dri :action JavaScript.Debugger.ReloadInBrowser<CR>
 nnoremap <leader>drc :action RunToCursor<CR>
-nnoremap <leader>dw :action ActivateDebugToolWindow<CR>
+nnoremap <leader>do :action ActivateDebugToolWindow<CR>
+nnoremap <leader>dm :action XDebugger.MuteBreakpoints<CR>
 
 " Settings
 nmap <leader>os :action ShowSettings<CR>
