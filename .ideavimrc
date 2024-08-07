@@ -125,7 +125,7 @@ nmap <leader>mw :action ToolWindowsGroup<CR>
 " Debugger
 nmap <leader>dra :action Debugger.RemoveAllBreakpoints<CR>
 nmap <leader>db :action ToggleLineBreakpoint<CR>
-nmap <c-h> :action QuickEvaluateExpression<CR>
+nmap <c-e> :action QuickEvaluateExpression<CR>
 nmap <c-j> :action StepOver<CR>
 nmap <leader>dc :action Resume<CR>
 nnoremap <leader>dv :action ViewBreakpoints<CR>
@@ -149,7 +149,7 @@ nnoremap <leader>op :action OpenProjectWindows<CR>
 
 " Editor
 nnoremap sn :action SelectNextOccurrence<CR>
-nnoremap <c-s-h> :action ShowHoverInfo<CR>
+nnoremap <leader>sh :action ShowHoverInfo<CR>
 nnoremap <leader>fl :action Javascript.Linters.EsLint.Fix<CR>
 
 " Bookmarks Window
@@ -165,6 +165,11 @@ nnoremap <leader>cs :action Vcs.Show.Shelf<CR>
 
 " Git Window
 nnoremap <leader>go :action ActivateVersionControlToolWindow<CR>
+nnoremap <leader>gr :action Vcs.RollbackChangedLines<CR>
+nnoremap <leader>gl :action Vcs.ShowDiffChangedLines<CR>
+nnoremap <leader>gf :action Diff.ShowDiff<CR>
+nnoremap ]d :action NextDiff<CR>
+nnoremap [d :action PreviousDiff<CR>
 
 " Set Plugins
 Plug 'preservim/nerdtree'
