@@ -38,7 +38,7 @@ nnoremap <leader>nh :nohl<CR>
 
 """ Window navigation
 nnoremap <c-\> :action SplitVertically<CR>
-nnoremap <c--> :action SplitHorizontally<CR>
+nnoremap <c-s--> :action SplitHorizontally<CR>
 nnoremap <c-=> :action Unsplit<CR>
 nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
 nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
