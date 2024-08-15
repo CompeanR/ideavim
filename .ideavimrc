@@ -136,7 +136,7 @@ nnoremap <leader>ds :action RunToolbarMainMultipleStopAction<CR>
 nnoremap <leader>dd :action Debug<CR>
 nnoremap <leader>dri :action JavaScript.Debugger.ReloadInBrowser<CR>
 nnoremap <leader>drc :action RunToCursor<CR>
-nnoremap <c-s-d> :action ActivateDebugToolWindow<CR>
+nnoremap <leader>do :action ActivateDebugToolWindow<CR>
 nnoremap <leader>dm :action XDebugger.MuteBreakpoints<CR>
 nnoremap <leader>dsl :action PhpListenDebugAction<CR>
 
@@ -156,6 +156,14 @@ nnoremap <leader>fl :action Javascript.Linters.EsLint.Fix<CR>
 nnoremap <leader>ep :action PinActiveTab<CR>
 nnoremap <leader>ec :action CloseAllUnpinnedEditors<CR>
 nnoremap <leader>rf :action RevealIn<CR>
+nnoremap <leader>em :action MaximizeEditorInSplit<CR>
+nnoremap <leader>en :action MaximizeEditorInSplit<CR>
+nnoremap [e :action StretchSplitToLeft<CR>
+nnoremap ]e :action StretchSplitToRight<CR>
+nnoremap <leader>et :action EditorTabsGroup<CR>
+
+" Files
+nnoremap <leader>fr :action RenameFile<CR>
 
 " Bookmarks Window
 nnoremap <c-s-b> :action ActivateBookmarksToolWindow<CR>
@@ -165,7 +173,7 @@ nnoremap ]b :action GotoNextBookmark<CR>
 nnoremap [b :action GotoPreviousBookmark<CR>
 
 " Commits Window
-nnoremap <c-s-c> :action ActivateCommitToolWindow<CR>
+nnoremap <leader>co :action ActivateCommitToolWindow<CR>
 nnoremap <leader>cs :action Vcs.Show.Shelf<CR>
 
 " Git Window
