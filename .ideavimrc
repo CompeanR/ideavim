@@ -98,7 +98,7 @@ nnoremap <leader>ll :action ActivateProblemsViewToolWindow<CR>
 " gotos
 nmap <leader>a :action GotoAction<CR>
 nmap ga :action GotoAction<CR>
-nmap gf :action GotoFile<CR>
+nmap <leader>of :action GotoFile<CR>
 nmap gs :action GotoSymbol<CR>
 nmap gT :action TextSearchAction<CR>
 nmap go :action GotoSuperMethod<CR>
@@ -130,14 +130,15 @@ nmap <c-e> :action QuickEvaluateExpression<CR>
 nmap <c-j> :action StepOver<CR>
 nmap <leader>dc :action Resume<CR>
 nnoremap <leader>db :action ViewBreakpoints<CR>
-nnoremap <leader>dex :action EvaluateExpression<CR>
+nnoremap <leader>de :action EvaluateExpression<CR>
 nnoremap <leader>dsi :action StepInto<CR>
 nnoremap <leader>ds :action RunToolbarMainMultipleStopAction<CR>
 nnoremap <leader>dd :action Debug<CR>
-nnoremap <c-s-r> :action JavaScript.Debugger.ReloadInBrowser<CR>
+nnoremap <leader>dri :action JavaScript.Debugger.ReloadInBrowser<CR>
 nnoremap <leader>drc :action RunToCursor<CR>
 nnoremap <c-s-d> :action ActivateDebugToolWindow<CR>
 nnoremap <leader>dm :action XDebugger.MuteBreakpoints<CR>
+nnoremap <leader>dsl :action PhpListenDebugAction<CR>
 
 " Settings
 nmap <leader>os :action ShowSettings<CR>
@@ -149,14 +150,17 @@ nnoremap [p :action PreviousProjectWindow<CR>
 nnoremap <leader>op :action OpenProjectWindows<CR>
 
 " Editor
-nnoremap sn :action SelectNextOccurrence<CR>
-nnoremap <leader>sh :action ShowHoverInfo<CR>
+nnoremap <leader>eo :action SelectNextOccurrence<CR>
+nnoremap <leader>eh :action ShowHoverInfo<CR>
 nnoremap <leader>fl :action Javascript.Linters.EsLint.Fix<CR>
+nnoremap <leader>ep :action PinActiveTab<CR>
+nnoremap <leader>ec :action CloseAllUnpinnedEditors<CR>
+nnoremap <leader>rf :action RevealIn<CR>
 
 " Bookmarks Window
-nnoremap <leader>bb :action ActivateBookmarksToolWindow<CR>
+nnoremap <c-s-b> :action ActivateBookmarksToolWindow<CR>
 nnoremap <leader>ba :action ToggleBookmark<CR>
-nnoremap <c-s-b> :action ShowBookmarks<CR>
+nnoremap <leader>bb :action ShowBookmarks<CR>
 nnoremap ]b :action GotoNextBookmark<CR>
 nnoremap [b :action GotoPreviousBookmark<CR>
 
