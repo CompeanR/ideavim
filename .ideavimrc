@@ -151,7 +151,7 @@ nnoremap <leader>op :action OpenProjectWindows<CR>
 
 " Editor
 nnoremap <leader>eo :action SelectNextOccurrence<CR>
-nnoremap <leader>eh :action ShowHoverInfo<CR>
+nnoremap <leader>h :action ShowHoverInfo<CR>
 nnoremap <leader>fl :action Javascript.Linters.EsLint.Fix<CR>
 nnoremap <leader>ep :action PinActiveTab<CR>
 nnoremap <leader>ec :action CloseAllUnpinnedEditors<CR>
@@ -184,8 +184,6 @@ nnoremap <leader>gf :action Diff.ShowDiff<CR>
 nnoremap ]d :action NextDiff<CR>
 nnoremap [d :action PreviousDiff<CR>
 nnoremap <leader>gb :action Annotate<CR>
-nnoremap <leader>gsi :nnoremap j :action NextDiff<CR> | nnoremap k :action PreviousDiff<CR><CR>
-nnoremap <leader>gei :nnoremap j <Nop> | nnoremap k <Nop><CR>
 
 " Set Plugins
 Plug 'preservim/nerdtree'
