@@ -139,6 +139,7 @@ nnoremap <leader>drc :action RunToCursor<CR>
 nnoremap <leader>do :action ActivateDebugToolWindow<CR>
 nnoremap <leader>dm :action XDebugger.MuteBreakpoints<CR>
 nnoremap <leader>dsl :action PhpListenDebugAction<CR>
+nnoremap <leader>dw :action Debugger.AddToWatch<CR>
 
 " Settings
 nmap <leader>os :action ShowSettings<CR>
@@ -155,7 +156,7 @@ nnoremap <leader>h :action ShowHoverInfo<CR>
 nnoremap <leader>fl :action Javascript.Linters.EsLint.Fix<CR>
 nnoremap <leader>ep :action PinActiveTab<CR>
 nnoremap <leader>ec :action CloseAllUnpinnedEditors<CR>
-nnoremap <leader>rf :action RevealIn<CR>
+nnoremap <leader>er :action RevealIn<CR>
 nnoremap <leader>em :action MaximizeEditorInSplit<CR>
 nnoremap <leader>en :action MaximizeEditorInSplit<CR>
 nnoremap [e :action StretchSplitToLeft<CR>
@@ -191,4 +192,13 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-highlightedyank'
 
+" Functions
 
+" Define a function for the debug cycle
+function! HardContinue()
+    action XDebugger.MuteBreakpoints
+    action Resume
+    action JavaScript.Debugger.ReloadInBrowser
+    action XDebugger.MuteBreakpoints
+endfunction
+nnoremap <leader>dhc :call HardContinue()<CR>
