@@ -194,7 +194,8 @@ Plug 'machakann/vim-highlightedyank'
 
 " Functions
 
-" Define a function for the debug cycle
+" Debugger
+" Define a function for hard continue and reloading the browser.
 function! HardContinue()
     action XDebugger.MuteBreakpoints
     action Resume
@@ -202,3 +203,22 @@ function! HardContinue()
     action XDebugger.MuteBreakpoints
 endfunction
 nnoremap <leader>dhc :call HardContinue()<CR>
+
+
+" Define a function for soft continue
+function! SoftContinue()
+    action XDebugger.MuteBreakpoints
+
+    for i in range(1000)
+	" just loop
+    endfor
+
+    action Resume
+    
+    for i in range(1000)
+	" just loop
+    endfor
+
+    action XDebugger.MuteBreakpoints
+endfunction
+nnoremap <leader>dsc :call SoftContinue()<CR>
