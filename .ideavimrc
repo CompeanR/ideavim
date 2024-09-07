@@ -20,12 +20,70 @@ set highlightedyank
 set NERDTree
 set sneak
 set easymotion
+
+" Make compatibility between mac and linux env.
+if has ('mac')
+  let g:is_mac = 1
+else
+  let g:is_mac = 0
+endif
+
+if g:is_mac
+    """ Window navigation
+    nmap <D-d> <C-d>
+    nmap <D-u> <C-u>
+    nmap <D-o> <C-o>
+    nmap <D-i> <C-i>
+    nmap <D-r> <C-r>
+    nmap <D-S-L> :action MoveTabRight<CR>
+    nnoremap <D-\> :action SplitVertically<CR>
+    nnoremap <d-s--> :action SplitHorizontally<CR>
+    nnoremap <d-=> :action Unsplit<CR>
+    nnoremap <d-m> :action MoveEditorToOppositeTabGroup<CR>
+    nnoremap <d-z> :action ToggleDistractionFreeMode<CR>
+    nnoremap <d-h> :action PrevSplitter<CR>
+    nnoremap <d-l> :action NextSplitter<CR>
+    nnoremap <d-w> :action CloseContent<CR>
+
+    " Tab Navigation
+    nmap <d-[> :action PreviousTab<CR>
+    nmap <d-]> :action NextTab<CR>
+
+    "Debugger
+    nmap <D-e> :action QuickEvaluateExpression<CR>
+    nmap <D-j> :action StepOver<CR>
+
+    "Bookmarks
+    nnoremap <d-s-b> :action ActivateBookmarksToolWindow<CR>
+endif
+
+""" Window navigation
+nmap <C-S-L> :action MoveTabRight<CR>
+nnoremap <c-\> :action SplitVertically<CR>
+nnoremap <c-s--> :action SplitHorizontally<CR>
+nnoremap <c-=> :action Unsplit<CR>
+nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+nnoremap <c-h> :action PrevSplitter<CR>
+nnoremap <c-l> :action NextSplitter<CR>
+nnoremap <c-w> :action CloseContent<CR>
+
+" Tab Navigation
+nmap <c-[> :action PreviousTab<CR>
+nmap <c-]> :action NextTab<CR>
+
+" Debugger
+nmap <c-e> :action QuickEvaluateExpression<CR>
+nmap <c-j> :action StepOver<CR>
+
+"Bookmarks
+nnoremap <c-s-b> :action ActivateBookmarksToolWindow<CR>
+
+" NERDTree Configs
 "let g:NERDTreeWinSize=30
 "let g:NERDTreeMapPreview = 'O'
 nmap <c-s-e> :NERDTreeToggle<CR>
 nmap ce :NERDTreeFocus<CR>
-" nnoremap <c-d> <c-d>zz
-" nnoremap <c-u> <c-u>zz
 
 " continuous shift
 xnoremap < <gv
@@ -36,22 +94,10 @@ nmap <leader>h :nohlsearch<CR>
 inoremap jk <ESC>
 nnoremap <leader>nh :nohl<CR>
 
-""" Window navigation
-nnoremap <c-s-l> :action MoveTabRight<CR>
-nnoremap <c-\> :action SplitVertically<CR>
-nnoremap <c-s--> :action SplitHorizontally<CR>
-nnoremap <c-=> :action Unsplit<CR>
-nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
-nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
-nnoremap <c-h> :action PrevSplitter<CR>
-nnoremap <c-l> :action NextSplitter<CR>
-nnoremap <c-w> :action CloseContent<CR>
 
 " Tab navigation
 nnoremap <leader>tn :bnext<CR>
 nnoremap <leader>tp :bprevious<CR>
-nmap <c-[> :action PreviousTab<CR>
-nmap <c-]> :action NextTab<CR>
 nmap <leader>t :action GotoTest<CR>
 
 " Move selected line / block of text in visual mode
@@ -63,15 +109,10 @@ nnoremap <leader>ff :action FindInPath<CR>
 nnoremap <leader>sf :action GotoFile<CR>
 nnoremap <leader>ls :action ActivateStructureToolWindow<CR>
 noremap <leader>fs :action FileStructurePopup<CR>
-nnoremap <leader>or :action RecentFiles<CR>
 
 " Code completion
-nnoremap <c-a> :action GotoAction<CR>
-nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
-nnoremap <c-p> :action RecentFiles<CR>
 nnoremap <leader>rm :action RunMenu<CR>
 nnoremap <c-g> :action Generate<CR>
-nnoremap <leader><Tab> :action ShowNavBar<CR>
 
 " Jump
 nmap [h :action PreviousTab<CR>
@@ -126,9 +167,7 @@ nmap <leader>mw :action ToolWindowsGroup<CR>
 " Debugger
 nmap <leader>dra :action Debugger.RemoveAllBreakpoints<CR>
 nmap <leader>da :action ToggleLineBreakpoint<CR>
-nmap <c-e> :action QuickEvaluateExpression<CR>
-nmap <c-j> :action StepOver<CR>
-nmap <leader>dc :action Resume<CR>
+nmap <A-c> :action Resume<CR>
 nnoremap <leader>db :action ViewBreakpoints<CR>
 nnoremap <leader>de :action EvaluateExpression<CR>
 nnoremap <leader>dsi :action StepInto<CR>
@@ -149,6 +188,7 @@ nnoremap <leader>wc :action HideActiveWindow<CR>
 nnoremap ]p :action NextProjectWindow<CR>
 nnoremap [p :action PreviousProjectWindow<CR>
 nnoremap <leader>op :action OpenProjectWindows<CR>
+nnoremap <leader>or :action $LRU<CR>
 
 " Editor
 nnoremap <leader>eo :action SelectNextOccurrence<CR>
@@ -167,7 +207,6 @@ nnoremap <leader>et :action EditorTabsGroup<CR>
 nnoremap <leader>fr :action RenameFile<CR>
 
 " Bookmarks Window
-nnoremap <c-s-b> :action ActivateBookmarksToolWindow<CR>
 nnoremap <leader>ba :action ToggleBookmark<CR>
 nnoremap <leader>bb :action ShowBookmarks<CR>
 nnoremap ]b :action GotoNextBookmark<CR>
@@ -178,7 +217,7 @@ nnoremap <leader>co :action ActivateCommitToolWindow<CR>
 nnoremap <leader>cs :action Vcs.Show.Shelf<CR>
 
 " Git Window
-nnoremap <c-s-g> :action ActivateVersionControlToolWindow<CR>
+nnoremap <leader>go :action ActivateVersionControlToolWindow<CR>
 nnoremap <leader>gr :action Vcs.RollbackChangedLines<CR>
 nnoremap <leader>gl :action Vcs.ShowDiffChangedLines<CR>
 nnoremap <leader>gf :action Diff.ShowDiff<CR>
@@ -214,7 +253,7 @@ function! SoftContinue()
     endfor
 
     action Resume
-    
+
     for i in range(1000)
 	" just loop
     endfor
