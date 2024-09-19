@@ -187,8 +187,9 @@ nnoremap <leader>wc :action HideActiveWindow<CR>
 " Project Window
 nnoremap ]p :action NextProjectWindow<CR>
 nnoremap [p :action PreviousProjectWindow<CR>
-nnoremap <leader>op :action OpenProjectWindows<CR>
-nnoremap <leader>or :action $LRU<CR>
+nnoremap <leader>po :action OpenProjectWindows<CR>
+nnoremap <leader>pr :action $LRU<CR>
+nnoremap <leader>pc :action PhpNewClass<CR>
 
 " Editor
 nnoremap <leader>eo :action SelectNextOccurrence<CR>
@@ -211,6 +212,24 @@ nnoremap <leader>ba :action ToggleBookmark<CR>
 nnoremap <leader>bb :action ShowBookmarks<CR>
 nnoremap ]b :action GotoNextBookmark<CR>
 nnoremap [b :action GotoPreviousBookmark<CR>
+nnoremap <leader><leader>1 :action ToggleBookmark1<CR>
+nnoremap <leader><leader>2 :action ToggleBookmark2<CR>
+nnoremap <leader><leader>3 :action ToggleBookmark3<CR>
+nnoremap <leader><leader>4 :action ToggleBookmark4<CR>
+nnoremap <leader><leader>5 :action ToggleBookmark5<CR>
+nnoremap <leader><leader>6 :action ToggleBookmark6<CR>
+nnoremap <leader><leader>7 :action ToggleBookmark7<CR>
+nnoremap <leader><leader>8 :action ToggleBookmark8<CR>
+nnoremap <leader><leader>9 :action ToggleBookmark9<CR>
+nnoremap <leader>1 :action GotoBookmark1<CR>
+nnoremap <leader>2 :action GotoBookmark2<CR>
+nnoremap <leader>3 :action GotoBookmark3<CR>
+nnoremap <leader>4 :action GotoBookmark4<CR>
+nnoremap <leader>5 :action GotoBookmark5<CR>
+nnoremap <leader>6 :action GotoBookmark6<CR>
+nnoremap <leader>7 :action GotoBookmark7<CR>
+nnoremap <leader>8 :action GotoBookmark8<CR>
+nnoremap <leader>9 :action GotoBookmark9<CR>
 
 " Commits Window
 nnoremap <leader>co :action ActivateCommitToolWindow<CR>
