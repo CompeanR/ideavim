@@ -179,6 +179,7 @@ nnoremap <leader>do :action ActivateDebugToolWindow<CR>
 nnoremap <leader>dm :action XDebugger.MuteBreakpoints<CR>
 nnoremap <leader>dsl :action PhpListenDebugAction<CR>
 nnoremap <leader>dw :action Debugger.AddToWatch<CR>
+nnoremap <leader>dt :action ToggleBreakpointEnabled<CR>
 
 " Settings
 nmap <leader>os :action ShowSettings<CR>
@@ -206,12 +207,16 @@ nnoremap <leader>et :action EditorTabsGroup<CR>
 
 " Files
 nnoremap <leader>fr :action RenameFile<CR>
+nnoremap <leader>fc :action PhpNewClass<CR>
 
 " Bookmarks Window
 nnoremap <leader>ba :action ToggleBookmark<CR>
 nnoremap <leader>bb :action ShowBookmarks<CR>
 nnoremap ]b :action GotoNextBookmark<CR>
 nnoremap [b :action GotoPreviousBookmark<CR>
+nnoremap <leader>brm :action DeleteMnemonicFromBookmark<CR>
+nnoremap <leader>bam :action ToggleBookmarkWithMnemonic<CR>
+nnoremap <leader>be :action EditBookmark<CR>
 nnoremap <leader><leader>1 :action ToggleBookmark1<CR>
 nnoremap <leader><leader>2 :action ToggleBookmark2<CR>
 nnoremap <leader><leader>3 :action ToggleBookmark3<CR>
