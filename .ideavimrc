@@ -167,7 +167,7 @@ nmap <leader>mw :action ToolWindowsGroup<CR>
 " Debugger
 nmap <leader>dra :action Debugger.RemoveAllBreakpoints<CR>
 nmap <leader>da :action ToggleLineBreakpoint<CR>
-nmap <A-c> :action Resume<CR>
+nmap <c-n> :action Resume<CR>
 nnoremap <leader>db :action ViewBreakpoints<CR>
 nnoremap <leader>de :action EvaluateExpression<CR>
 nnoremap <leader>dsi :action StepInto<CR>
@@ -201,9 +201,17 @@ nnoremap <leader>ec :action CloseAllUnpinnedEditors<CR>
 nnoremap <leader>er :action RevealIn<CR>
 nnoremap <leader>em :action MaximizeEditorInSplit<CR>
 nnoremap <leader>en :action MaximizeEditorInSplit<CR>
+nnoremap <leader>eor :action RecentChanges<CR>
+nnoremap <leader>efr :action Replace<CR>
 nnoremap [e :action StretchSplitToLeft<CR>
 nnoremap ]e :action StretchSplitToRight<CR>
 nnoremap <leader>et :action EditorTabsGroup<CR>
+nnoremap <a-1> :action GoToTab1<CR>
+nnoremap <c-2> :action GoToTab2<CR>
+nnoremap <c-3> :action GoToTab3<CR>
+nnoremap <c-4> :action GoToTab4<CR>
+nnoremap <c-5> :action GoToTab5<CR>
+nnoremap <c-6> :action GoToTab6<CR>
 
 " Files
 nnoremap <leader>fr :action RenameFile<CR>
@@ -215,8 +223,9 @@ nnoremap <leader>bb :action ShowBookmarks<CR>
 nnoremap ]b :action GotoNextBookmark<CR>
 nnoremap [b :action GotoPreviousBookmark<CR>
 nnoremap <leader>brm :action DeleteMnemonicFromBookmark<CR>
-nnoremap <leader>bam :action ToggleBookmarkWithMnemonic<CR>
+nnoremap <leader>bm :action ToggleBookmarkWithMnemonic<CR>
 nnoremap <leader>be :action EditBookmark<CR>
+nnoremap <leader><leader>m :action ShowTypeBookmarks<CR>
 nnoremap <leader><leader>1 :action ToggleBookmark1<CR>
 nnoremap <leader><leader>2 :action ToggleBookmark2<CR>
 nnoremap <leader><leader>3 :action ToggleBookmark3<CR>
@@ -237,7 +246,7 @@ nnoremap <leader>8 :action GotoBookmark8<CR>
 nnoremap <leader>9 :action GotoBookmark9<CR>
 
 " Commits Window
-nnoremap <leader>co :action ActivateCommitToolWindow<CR>
+nnoremap <leader>cc :action ActivateCommitToolWindow<CR>
 nnoremap <leader>cs :action Vcs.Show.Shelf<CR>
 
 " Git Window
