@@ -36,6 +36,8 @@ if g:is_mac
     nmap <D-i> <C-i>
     nmap <D-r> <C-r>
     nmap <D-S-L> :action MoveTabRight<CR>
+    vmap <d-u> <c-u>
+    vmap <d-d> <c-d>
     nnoremap <D-\> :action SplitVertically<CR>
     nnoremap <d-s--> :action SplitHorizontally<CR>
     nnoremap <d-=> :action Unsplit<CR>
@@ -93,6 +95,7 @@ nmap <leader>h :nohlsearch<CR>
 " Remaps
 inoremap jk <ESC>
 nnoremap <leader>nh :nohl<CR>
+nmap s <Plug>(easymotion-s2)
 
 
 " Tab navigation
@@ -167,7 +170,7 @@ nmap <leader>mw :action ToolWindowsGroup<CR>
 " Debugger
 nmap <leader>dra :action Debugger.RemoveAllBreakpoints<CR>
 nmap <leader>da :action ToggleLineBreakpoint<CR>
-nmap <c-n> :action Resume<CR>
+nmap <leader>dc :action Resume<CR>
 nnoremap <leader>db :action ViewBreakpoints<CR>
 nnoremap <leader>de :action EvaluateExpression<CR>
 nnoremap <leader>dsi :action StepInto<CR>
@@ -207,24 +210,27 @@ nnoremap [e :action StretchSplitToLeft<CR>
 nnoremap ]e :action StretchSplitToRight<CR>
 nnoremap <leader>et :action EditorTabsGroup<CR>
 nnoremap <a-1> :action GoToTab1<CR>
-nnoremap <c-2> :action GoToTab2<CR>
-nnoremap <c-3> :action GoToTab3<CR>
-nnoremap <c-4> :action GoToTab4<CR>
-nnoremap <c-5> :action GoToTab5<CR>
-nnoremap <c-6> :action GoToTab6<CR>
+nnoremap <a-2> :action GoToTab2<CR>
+nnoremap <a-3> :action GoToTab3<CR>
+nnoremap <a-4> :action GoToTab4<CR>
+nnoremap <a-5> :action GoToTab5<CR>
+nnoremap <a-6> :action GoToTab6<CR>
+nnoremap <a-o> :action SelectNextOccurrence<CR>
+nnoremap <a-f> :action FindInPath<CR>
+
 
 " Files
 nnoremap <leader>fr :action RenameFile<CR>
 nnoremap <leader>fc :action PhpNewClass<CR>
 
 " Bookmarks Window
-nnoremap <leader>ba :action ToggleBookmark<CR>
-nnoremap <leader>bb :action ShowBookmarks<CR>
-nnoremap ]b :action GotoNextBookmark<CR>
-nnoremap [b :action GotoPreviousBookmark<CR>
-nnoremap <leader>brm :action DeleteMnemonicFromBookmark<CR>
-nnoremap <leader>bm :action ToggleBookmarkWithMnemonic<CR>
-nnoremap <leader>be :action EditBookmark<CR>
+nnoremap <leader>qq :action ToggleBookmark<CR>
+nnoremap <leader>ql :action ShowBookmarks<CR>
+nnoremap ]q :action GotoNextBookmark<CR>
+nnoremap [q :action GotoPreviousBookmark<CR>
+nnoremap <leader>qrm :action DeleteMnemonicFromBookmark<CR>
+nnoremap <leader>qm :action ToggleBookmarkWithMnemonic<CR>
+nnoremap <leader>qe :action EditBookmark<CR>
 nnoremap <leader><leader>m :action ShowTypeBookmarks<CR>
 nnoremap <leader><leader>1 :action ToggleBookmark1<CR>
 nnoremap <leader><leader>2 :action ToggleBookmark2<CR>
@@ -257,6 +263,11 @@ nnoremap <leader>gf :action Diff.ShowDiff<CR>
 nnoremap ]d :action NextDiff<CR>
 nnoremap [d :action PreviousDiff<CR>
 nnoremap <leader>gb :action Annotate<CR>
+
+" Local History
+nnoremap <leader>lo :action RecentChanges<CR>
+nnoremap <leader>lh :action LocalHistory<CR>
+vmap <leader>ls :action LocalHistory.ShowSelectionHistory<CR>
 
 " Set Plugins
 Plug 'preservim/nerdtree'
