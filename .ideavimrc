@@ -96,6 +96,7 @@ nmap <leader>h :nohlsearch<CR>
 inoremap jk <ESC>
 nnoremap <leader>nh :nohl<CR>
 nmap s <Plug>(easymotion-s2)
+vmap s <Plug>(easymotion-s2)
 
 
 " Tab navigation
@@ -142,7 +143,7 @@ nnoremap <leader>ll :action ActivateProblemsViewToolWindow<CR>
 " gotos
 nmap <leader>a :action GotoAction<CR>
 nmap ga :action GotoAction<CR>
-nmap <leader>of :action GotoFile<CR>
+nmap <d-p> :action GotoFile<CR>
 nmap gs :action GotoSymbol<CR>
 nmap gT :action TextSearchAction<CR>
 nmap go :action GotoSuperMethod<CR>
@@ -173,6 +174,7 @@ nmap <leader>da :action ToggleLineBreakpoint<CR>
 nmap <leader>dc :action Resume<CR>
 nnoremap <leader>db :action ViewBreakpoints<CR>
 nnoremap <leader>de :action EvaluateExpression<CR>
+vnoremap <leader>de :action EvaluateExpression<CR>
 nnoremap <leader>dsi :action StepInto<CR>
 nnoremap <leader>ds :action RunToolbarMainMultipleStopAction<CR>
 nnoremap <leader>dd :action Debug<CR>
@@ -183,6 +185,8 @@ nnoremap <leader>dm :action XDebugger.MuteBreakpoints<CR>
 nnoremap <leader>dsl :action PhpListenDebugAction<CR>
 nnoremap <leader>dw :action Debugger.AddToWatch<CR>
 nnoremap <leader>dt :action ToggleBreakpointEnabled<CR>
+nnoremap <leader>dsm :action SmartStepInto<CR>
+nnoremap <leader>dse :action ShowExecutionPoint<CR>
 
 " Settings
 nmap <leader>os :action ShowSettings<CR>
@@ -224,13 +228,13 @@ nnoremap <leader>fr :action RenameFile<CR>
 nnoremap <leader>fc :action PhpNewClass<CR>
 
 " Bookmarks Window
-nnoremap <leader>qq :action ToggleBookmark<CR>
-nnoremap <leader>ql :action ShowBookmarks<CR>
-nnoremap ]q :action GotoNextBookmark<CR>
-nnoremap [q :action GotoPreviousBookmark<CR>
-nnoremap <leader>qrm :action DeleteMnemonicFromBookmark<CR>
-nnoremap <leader>qm :action ToggleBookmarkWithMnemonic<CR>
-nnoremap <leader>qe :action EditBookmark<CR>
+nnoremap <leader>ba :action ToggleBookmark<CR>
+nnoremap <leader>bb :action ShowBookmarks<CR>
+nnoremap ]b :action GotoNextBookmark<CR>
+nnoremap [b :action GotoPreviousBookmark<CR>
+nnoremap <leader>brm :action DeleteMnemonicFromBookmark<CR>
+nnoremap <leader>bm :action ToggleBookmarkWithMnemonic<CR>
+nnoremap <leader>be :action EditBookmark<CR>
 nnoremap <leader><leader>m :action ShowTypeBookmarks<CR>
 nnoremap <leader><leader>1 :action ToggleBookmark1<CR>
 nnoremap <leader><leader>2 :action ToggleBookmark2<CR>
