@@ -42,7 +42,6 @@ if g:is_mac
     nnoremap <d-s--> :action SplitHorizontally<CR>
     nnoremap <d-=> :action Unsplit<CR>
     nnoremap <d-m> :action MoveEditorToOppositeTabGroup<CR>
-    nnoremap <d-z> :action ToggleDistractionFreeMode<CR>
     nnoremap <d-h> :action PrevSplitter<CR>
     nnoremap <d-l> :action NextSplitter<CR>
     nnoremap <d-w> :action CloseContent<CR>
@@ -172,7 +171,7 @@ nmap <leader>mw :action ToolWindowsGroup<CR>
 nmap <leader>dra :action Debugger.RemoveAllBreakpoints<CR>
 nmap <leader>da :action ToggleLineBreakpoint<CR>
 nmap <leader>dc :action Resume<CR>
-nnoremap <leader>db :action ViewBreakpoints<CR>
+nnoremap <leader>dbb :action ViewBreakpoints<CR>
 nnoremap <leader>de :action EvaluateExpression<CR>
 vnoremap <leader>de :action EvaluateExpression<CR>
 nnoremap <leader>dsi :action StepInto<CR>
@@ -187,6 +186,7 @@ nnoremap <leader>dw :action Debugger.AddToWatch<CR>
 nnoremap <leader>dt :action ToggleBreakpointEnabled<CR>
 nnoremap <leader>dsm :action SmartStepInto<CR>
 nnoremap <leader>dse :action ShowExecutionPoint<CR>
+nnoremap <leader>dbe :action EditBreakpoint<CR>
 
 " Settings
 nmap <leader>os :action ShowSettings<CR>
@@ -256,8 +256,9 @@ nnoremap <leader>8 :action GotoBookmark8<CR>
 nnoremap <leader>9 :action GotoBookmark9<CR>
 
 " Commits Window
-nnoremap <leader>cc :action ActivateCommitToolWindow<CR>
+nnoremap <leader>co :action ActivateCommitToolWindow<CR>
 nnoremap <leader>cs :action Vcs.Show.Shelf<CR>
+nnoremap <leader>cc :action Vcs.Show.Local.Changes<CR>
 
 " Git Window
 nnoremap <leader>go :action ActivateVersionControlToolWindow<CR>
